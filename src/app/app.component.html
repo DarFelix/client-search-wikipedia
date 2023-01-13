@@ -1,0 +1,13 @@
+<div class="container">
+  <header>
+    <h4 class="title">WikiSearch</h4>
+    <p class="sub-title">
+      La Enciclopedia Libre
+    </p>
+  </header>
+  <app-search (submitted)="onSearch($event)"></app-search>
+  <ng-container *ngFor="let article of articles$ | async">
+    <app-article [article]="article"></app-article>
+  </ng-container>
+  
+</div>
